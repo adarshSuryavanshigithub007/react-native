@@ -1,0 +1,147 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+/*
+ * Reusable design tokens — copy this file into any NativeWind v5 + Expo project.
+ * Import once in app/_layout.tsx: import "../global.css";
+ *
+ * Colors:  bg-primary, text-foreground, bg-sage, border-border, etc.
+ * Icons:   use with Ionicons + className text-icon / text-icon-muted
+ *          sizes: style={{ width: 22 }} or use spacing tokens w-icon-md h-icon-md
+ */
+
+@theme {
+  /* ── Palette (reference UI) ───────────────────────────────────────────── */
+  --color-cream: #fdf8e1;
+  --color-cream-card: #fff9eb;
+  --color-terracotta: #e76f51;
+  --color-terracotta-dark: #d45f43;
+  --color-sage: #8ab17d;
+  --color-mustard: #e9c46a;
+  --color-periwinkle: #bdd5ea;
+  --color-navy: #1c1c1e;
+  --color-navy-muted: #3a3a3c;
+  --color-white: #ffffff;
+
+  /* ── Semantic colors ──────────────────────────────────────────────────── */
+  --color-background: #fdf8e1;
+  --color-foreground: #1c1c1e;
+  --color-primary: #e76f51;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #8ab17d;
+  --color-secondary-foreground: #1c1c1e;
+  --color-muted: #f5f0d6;
+  --color-muted-foreground: #5c5c5e;
+  --color-card: #fff9eb;
+  --color-card-foreground: #1c1c1e;
+  --color-border: #e8e0c8;
+  --color-accent: #bdd5ea;
+  --color-accent-foreground: #1c1c1e;
+  --color-destructive: #1c1c1e;
+  --color-destructive-foreground: #ffffff;
+
+  /* ── Icon colors (Ionicons color prop or text-icon-* utilities) ─────── */
+  --color-icon: #1c1c1e;
+  --color-icon-muted: #a1a1a6;
+  --color-icon-inverse: #ffffff;
+  --color-icon-primary: #e76f51;
+  --color-icon-on-dark: #a1a1a6;
+  --color-icon-active: #ffffff;
+  --color-icon-nav-active-bg: #e76f51;
+
+  /* ── Icon sizes (width/height utilities: w-icon-md h-icon-md) ─────────── */
+  --spacing-icon-xs: 16px;
+  --spacing-icon-sm: 20px;
+  --spacing-icon-md: 22px;
+  --spacing-icon-lg: 28px;
+  --spacing-icon-xl: 32px;
+
+  /* ── Spacing ──────────────────────────────────────────────────────────── */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 2.5rem;
+  --spacing-screen: 1.25rem;
+  --spacing-section: 1.5rem;
+
+  /* ── Radius ───────────────────────────────────────────────────────────── */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-card: 1.5rem;
+  --radius-button: 1.75rem;
+  --radius-pill: 9999px;
+  --radius-nav: 2rem;
+
+  /* ── Typography ───────────────────────────────────────────────────────── */
+  --text-display: 2rem;
+  --text-display--line-height: calc(2.25 / 2);
+  --text-h1: 1.75rem;
+  --text-h1--line-height: calc(2 / 1.75);
+  --text-h2: 1.375rem;
+  --text-h2--line-height: calc(1.75 / 1.375);
+  --text-h3: 1.125rem;
+  --text-h3--line-height: calc(1.5 / 1.125);
+  --text-body: 1rem;
+  --text-body--line-height: calc(1.5 / 1);
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: calc(1.25 / 0.875);
+  --text-caption: 0.75rem;
+  --text-caption--line-height: calc(1 / 0.75);
+  --text-balance: 2.5rem;
+  --text-balance--line-height: 1.1;
+}
+
+/* Runtime defaults (required for CSS variables + dynamic theming) */
+:root {
+  --color-cream: #fdf8e1;
+  --color-cream-card: #fff9eb;
+  --color-terracotta: #e76f51;
+  --color-sage: #8ab17d;
+  --color-mustard: #e9c46a;
+  --color-periwinkle: #bdd5ea;
+  --color-navy: #1c1c1e;
+
+  --color-background: #fdf8e1;
+  --color-foreground: #1c1c1e;
+  --color-primary: #e76f51;
+  --color-primary-foreground: #ffffff;
+  --color-muted-foreground: #5c5c5e;
+  --color-card: #fff9eb;
+  --color-card-foreground: #1c1c1e;
+  --color-border: #e8e0c8;
+
+  --color-icon: #1c1c1e;
+  --color-icon-muted: #a1a1a6;
+  --color-icon-inverse: #ffffff;
+  --color-icon-primary: #e76f51;
+  --color-icon-on-dark: #a1a1a6;
+  --color-icon-active: #ffffff;
+}
+
+@layer components {
+  .screen {
+    @apply flex-1 gap-md bg-background px-screen pt-section;
+  }
+
+  .btn {
+    @apply min-w-48 rounded-button px-xl py-md text-center text-h3 font-semibold;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground;
+  }
+
+  .btn-muted {
+    @apply border border-border bg-muted text-card-foreground;
+  }
+}
