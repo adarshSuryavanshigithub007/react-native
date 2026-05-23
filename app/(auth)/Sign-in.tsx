@@ -8,6 +8,7 @@ export default function SignIn() {
       <Link href="/(auth)/Sign-up" className="text-body text-primary">
         Create Account
       </Link>
+      <Link href="/" className="text-body text-primary">Home</Link>
     </View>
   );
 }

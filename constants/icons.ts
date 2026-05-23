@@ -1,36 +1,41 @@
-/**
- * Icon names for @expo/vector-icons (Ionicons).
- * Pair with global.css tokens: text-icon, text-icon-muted, bg-icon-nav-active-bg, etc.
- *
- * @example
- * <Ionicons name={Icons.home} size={22} className="text-icon" />
- * <Ionicons name={Icons.wallet} size={22} color="var(--color-icon-on-dark)" />
- */
-import type { Ionicons } from "@expo/vector-icons";
+import activity from "@/assets/icons/activity.png";
+import add from "@/assets/icons/add.png";
+import adobe from "@/assets/icons/adobe.png";
+import back from "@/assets/icons/back.png";
+import canva from "@/assets/icons/canva.png";
+import claude from "@/assets/icons/claude.png";
+import dropbox from "@/assets/icons/dropbox.png";
+import figma from "@/assets/icons/figma.png";
+import github from "@/assets/icons/github.png";
+import home from "@/assets/icons/home.png";
+import medium from "@/assets/icons/medium.png";
+import menu from "@/assets/icons/menu.png";
+import notion from "@/assets/icons/notion.png";
+import openai from "@/assets/icons/openai.png";
+import plus from "@/assets/icons/plus.png";
+import setting from "@/assets/icons/setting.png";
+import spotify from "@/assets/icons/spotify.png";
+import wallet from "@/assets/icons/wallet.png";
 
-export type IconName = keyof typeof Ionicons.glyphMap;
-
-/** Default icon size — matches --spacing-icon-md in global.css */
-export const ICON_SIZE = {
-  xs: 16,
-  sm: 20,
-  md: 22,
-  lg: 28,
-  xl: 32,
+export const icons = {
+    home,
+    wallet,
+    setting,
+    activity,
+    add,
+    back,
+    menu,
+    plus,
+    notion,
+    dropbox,
+    openai,
+    adobe,
+    medium,
+    figma,
+    spotify,
+    github,
+    claude,
+    canva,
 } as const;
 
-export const Icons = {
-  home: "home",
-  wallet: "wallet-outline",
-  chart: "bar-chart-outline",
-  person: "person-outline",
-  add: "add",
-  back: "chevron-back",
-  menu: "ellipsis-horizontal",
-  notion: "document-text-outline",
-  dropbox: "folder-open-outline",
-  spotify: "musical-notes-outline",
-  github: "logo-github",
-  claude: "chatbubble-ellipses-outline",
-  canva: "color-palette-outline",
-} as const satisfies Record<string, IconName>;
+export type IconKey = keyof typeof icons;
