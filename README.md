@@ -2,6 +2,15 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+## Project guide (beginners)
+
+New to React Native or mobile development? Read **[docs/PROJECT_GUIDE.md](docs/PROJECT_GUIDE.md)** for:
+
+- What each folder and file does
+- How screens and navigation connect (with flow diagrams)
+- How this project relates to traditional Android development
+- A suggested order for learning the codebase
+
 ## Get started
 
 1. Install dependencies
