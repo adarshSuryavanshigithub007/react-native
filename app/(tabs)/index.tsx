@@ -1,11 +1,14 @@
 import { Link } from "expo-router";
-import { ScrollView, Text } from "react-native";
+import { Text } from "react-native";
+import { styled } from "nativewind";
+import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
+
+const SafeAreaView = styled(RNSafeAreaView)
 
 export default function Index() {
   return (
-    <ScrollView
-      className="flex-1 bg-background"
-      contentContainerClassName="flex-grow items-center justify-center gap-lg px-screen py-section"
+    <SafeAreaView
+      className="flex-1 bg-background p-5"
     >
       <Text className="text-h2 font-bold text-foreground">shree ganeshaya namaha</Text>
       <Link href="/Onboarding" className="btn btn-primary">
@@ -26,6 +29,6 @@ export default function Index() {
       >
         Clouded
       </Link>
-    </ScrollView>
+    </SafeAreaView>
   );
 }
