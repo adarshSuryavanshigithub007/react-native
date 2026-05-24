@@ -10,8 +10,8 @@ export default function Index() {
     <SafeAreaView
       className="flex-1 bg-background p-5"
     >
-      <Text className="text-h2 font-bold text-foreground">shree ganeshaya namaha</Text>
-      <Link href="/Onboarding" className="btn btn-primary">
+      <Text className="text-h2 font-sans-extra-bold text-5xl text-center text-foreground ">shree ganeshaya namaha</Text>
+      <Link href="/Onboarding" className="btn btn-primary font-sans-bold text-lg">
         On Boarding
       </Link>
       <Link href="/(auth)/Sign-in" className="btn btn-secondary">
